@@ -3,3 +3,4 @@
 
 ## Topics:
 - Machine Learning
+- Object Oriented Design
