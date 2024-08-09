@@ -1,0 +1,14 @@
+import requests
+
+params = dict(q = "Sausages", format = "json")
+parsed = requests.get('http://api.duckduckgo.com/', params=params).json()
+
+results = parsed['RelatedTopics']
+for r in results:
+    if "Text" in r:
+        print(r['FirstURL'] + ' - ' + r['Text'])
+
+
+""" 
+More Abstract than urllib and you get the same data out
+"""
