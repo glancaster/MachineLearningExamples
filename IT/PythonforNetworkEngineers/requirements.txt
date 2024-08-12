@@ -1,0 +1,10 @@
+pytest 
+pytest-clarity 
+pyyaml 
+tabulate 
+jinja2 
+textfsm 
+pexpect 
+netmiko 
+graphviz
+ipython
