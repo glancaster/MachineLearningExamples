@@ -5,3 +5,4 @@
 - Machine Learning
 - Object Oriented Design
 - Architecture 
+- IT
