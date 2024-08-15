@@ -9,6 +9,6 @@ print(f"{i}:", 'mes'.isalpha());i+=1
 print(f"{i}:", 'mes '.isalpha());i+=1
 print(f"{i}:", 'mes..'.isalpha());i+=1
 print(f"{i}:", 'mes45'.isalnum());i+=1
-print(f"{i}:", type('message'));i+=1
+print(f"{i}:", type('message') == str);i+=1
 
 
