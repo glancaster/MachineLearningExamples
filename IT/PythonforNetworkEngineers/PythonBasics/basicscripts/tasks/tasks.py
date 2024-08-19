@@ -46,7 +46,7 @@ def task5_1b():
 
 
 def test_51(monkeypatch):
-    monkeypatch.setattr('builtins.input', lambda _: "r2")
+    monkeypatch.setattr('builtins.input', lambda _: "r2") #mimic a single input
     assert task5_1() == {
         "location": "21 New Globe Walk",
         "vendor": "Cisco",
@@ -66,9 +66,19 @@ def test_51(monkeypatch):
     }
 
 def test_51a(monkeypatch):
-    inputs = iter(['sw1', 'ios'])
+    inputs = iter(['sw1', 'ios'])#mimic multiple inputs
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     assert task5_1a() == "3.6.XE"
     inputs = iter(['r2', 'ip'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     assert task5_1a() == "10.255.0.2"
+
+def test_51b(capsys,monkeypatch):
+    inputs = iter(['sw1', 'ios'])#mimic multiple inputs
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+    assert task5_1b() == "3.6.XE"
+    captured = capsys.readouterr()
+    print(captured)
+    inputs = iter(['r2', 'ip'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+    assert task5_1b() == "10.255.0.2"
