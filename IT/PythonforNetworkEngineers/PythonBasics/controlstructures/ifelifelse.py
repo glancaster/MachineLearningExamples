@@ -1,0 +1,41 @@
+a = 9
+if a == 10:
+    print('a equal to 10')
+elif a < 10:
+    print('a less than 10')
+else:
+    print('a greater than 10')
+    
+list_to_test = [1,2,3]
+if list_to_test: # same as checking the len(list_to_test) >0 or !=0
+    print('the list has objects')
+
+print('Fast' in 'FastEthernet')
+print('Gigabit' in 'FastEthernet')
+
+vlan = [10,20,30]
+print(10 in vlan)
+print(50 in vlan)
+
+r1 = {
+        'IOS': '17.54',
+        'IP':'10.255.0.1'
+        }
+print('IOS' in r1)
+print('17.54' in r1)
+
+print('IOS' in r1 and 10 in vlan)
+print('17.54' in r1 and 10 in vlan)
+print('17.54' in r1 or 10 in vlan)
+print(not '17.54' in r1)
+print('17.54' not in r1)
+
+print('str1' and 'str2')
+print('' and 'str1')
+print('str1' or 'str2')
+print('' or 'str1')
+print('' or [] or {})
+s = [1,2,3,4]
+res = True if len(s) > 5 else False
+
+print(res)
