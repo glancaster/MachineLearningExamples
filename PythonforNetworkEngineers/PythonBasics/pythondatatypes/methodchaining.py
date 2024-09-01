@@ -15,3 +15,4 @@ print(vlans)
 vlansbetter = line.split()[-1].split(',')
 
 print(vlansbetter)
+
